@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Forge — Reusable Component Kit</title>
+  <!-- Google Fonts for premium typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Defer JavaScript execution -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-area">
+        <span class="logo-icon" aria-hidden="true">🛠️</span>
+        <div>
+          <h1>UI FORGE</h1>
+          <p class="subtitle">Reusable Components • Vanilla JS</p>
+        </div>
+      </div>
+      <!-- Accent Theme Toggle -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Theme" title="Toggle Mode">
+        <span class="theme-toggle-icon">🌙</span>
+      </button>
+    </header>
+
+    <!-- Main Showcase Layout -->
+    <main class="app-main">
+      <!-- Buttons Component Section -->
+      <section class="kit-section" aria-labelledby="buttons-title">
+        <header class="section-header">
+          <h2 id="buttons-title">🔘 Buttons</h2>
+          <p>Multiple variants, hover states, and click interactions built using <code>createButton()</code>.</p>
+        </header>
+        <div id="buttons-container" class="showcase-box flex-wrap-row">
+          <!-- Button instances will be dynamically appended here -->
+        </div>
+      </section>
+
+      <!-- Cards Component Section -->
+      <section class="kit-section" aria-labelledby="cards-title">
+        <header class="section-header">
+          <h2 id="cards-title">🃏 Cards</h2>
+          <p>Reusable content cards with configurable footers, icons, titles, and layout modes built using <code>createCard()</code>.</p>
+        </header>
+        <div id="cards-container" class="cards-grid">
+          <!-- Card instances will be dynamically appended here -->
+        </div>
+      </section>
+
+      <!-- Modals Component Section -->
+      <section class="kit-section" aria-labelledby="modals-title">
+        <header class="section-header">
+          <h2 id="modals-title">🪟 Modals</h2>
+          <p>Fully functional popup modals with dark backdrop overlay locking and keyboard escape handlers built using <code>createModal()</code>.</p>
+        </header>
+        <div id="modals-container" class="showcase-box flex-wrap-row">
+          <!-- Trigger buttons will be dynamically appended here -->
+        </div>
+      </section>
+
+      <!-- Toasts Notification Section -->
+      <section class="kit-section" aria-labelledby="toasts-title">
+        <header class="section-header">
+          <h2 id="toasts-title">🔔 Toast Notifications</h2>
+          <p>Stacked warning, success, info, and error notifications with timed auto-dismiss alerts built using <code>showToast()</code>.</p>
+        </header>
+        <div id="toasts-container" class="showcase-box flex-wrap-row">
+          <!-- Trigger buttons will be dynamically appended here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Component Thinking Section (Required 3-4 professional sentences) -->
+    <footer class="app-footer">
+      <div class="footer-card">
+        <h3>💡 How Component Thinking Changed My Code</h3>
+        <p>
+          Thinking in components helped me break the interface into small, self-contained pieces instead of building each section separately. By passing data and actions through configuration parameters, I can reuse the same functions to generate multiple variations without duplicating any HTML structure. This modular approach makes the codebase significantly easier to maintain and extend, while establishing a robust foundation before transitioning to frameworks like React.
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Global fixed container for Toast Notifications stacking -->
+  <div id="toast-container" class="toast-stack-container" aria-live="polite"></div>
+</body>
+</html>
